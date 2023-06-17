@@ -1,4 +1,4 @@
-package com.autobots.automanager.modelo.Atualiza;
+package com.autobots.automanager.modelo.atualiza;
 
 import java.util.List;
 

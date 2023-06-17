@@ -1,7 +1,6 @@
 package com.autobots.automanager.entidades;
 
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +10,7 @@ import javax.persistence.Id;
 
 import org.springframework.hateoas.RepresentationModel;
 
-import com.autobots.automanager.enumeracoes.PerfilUsuario;
+
 
 import lombok.Getter;
 import lombok.Setter;

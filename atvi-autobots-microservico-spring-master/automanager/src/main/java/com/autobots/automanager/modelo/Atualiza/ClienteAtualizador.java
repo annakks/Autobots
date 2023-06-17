@@ -1,4 +1,4 @@
-package com.autobots.automanager.modelo.Atualiza;
+package com.autobots.automanager.modelo.atualiza;
 
 import com.autobots.automanager.entidades.Cliente;
 import com.autobots.automanager.modelo.StringVerificadorNulo;
@@ -6,7 +6,6 @@ import com.autobots.automanager.modelo.StringVerificadorNulo;
 public class ClienteAtualizador {
 	private StringVerificadorNulo verificador = new StringVerificadorNulo();
 	private EnderecoAtualizador enderecoAtualizador = new EnderecoAtualizador();
-	private DocumentoAtualizador documentoAtualizador = new DocumentoAtualizador();
 	private TelefoneAtualizador telefoneAtualizador = new TelefoneAtualizador();
 
 	private void atualizarDados(Cliente cliente, Cliente atualizacao) {
@@ -27,7 +26,6 @@ public class ClienteAtualizador {
 	public void atualizar(Cliente cliente, Cliente atualizacao) {
 		atualizarDados(cliente, atualizacao);
 		enderecoAtualizador.atualizar(cliente.getEndereco(), atualizacao.getEndereco());
-		documentoAtualizador.atualizar(cliente.getDocumentos(), atualizacao.getDocumentos());
 		telefoneAtualizador.atualizar(cliente.getTelefones(), atualizacao.getTelefones());
 	}
 }

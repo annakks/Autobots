@@ -33,10 +33,13 @@ public class Cliente extends RepresentationModel<Cliente> {
 	private Date dataNascimento;
 	@Column
 	private Date dataCadastro;
-	@OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
-	private List<Documento> documentos = new ArrayList<>();
+	@Column
+	private String CPF;
+	@Column
+	private String RG;
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
 	private Endereco endereco;
 	@OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
 	private List<Telefone> telefones = new ArrayList<>();
+
 }

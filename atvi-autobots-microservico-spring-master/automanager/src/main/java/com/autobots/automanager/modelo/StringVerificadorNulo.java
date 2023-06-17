@@ -7,10 +7,10 @@ import com.autobots.automanager.enumeracoes.TipoDocumento;
 
 public class StringVerificadorNulo {
 
-	public boolean verificar(String string) {
+	public boolean verificar(String dado) {
 		boolean nulo = true;
-		if (!(string == null)) {
-			if (!string.isBlank()) {
+		if (!(dado == null)) {
+			if (!dado.isBlank()) {
 				nulo = false;
 			}
 		}
@@ -21,11 +21,11 @@ public class StringVerificadorNulo {
 		return false;
 	}
 
-	public boolean verificar(Endereco endereco) {
+	public boolean verificar(Date cadastro) {
 		return false;
 	}
 
-	public boolean verificar(Date cadastro) {
+	public boolean verificar(Endereco endereco) {
 		return false;
 	}
 }
