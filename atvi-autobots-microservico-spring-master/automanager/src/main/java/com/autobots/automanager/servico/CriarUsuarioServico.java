@@ -48,10 +48,32 @@ public class CriarUsuarioServico {
     return usuario;
   }
 
+  public void cadastrarAdministrador(CadastrarUsuario admin) {
+    Empresa empresa = encontrarEmpresa(admin.getRazaoSocial());
+
+    CadastrarUsuario novoUsuario = cadastrarUsuario(admin, PerfilUsuario.ADMINISTRADOR);
+
+    repositorioUsuario.save(novoUsuario.getUsuario());
+    empresa.getUsuarios().add(novoUsuario.getUsuario());
+
+    repositorioEmpresa.save(empresa);
+  }
+
+  public void cadastrarGerente(CadastrarUsuario admin) {
+    Empresa empresa = encontrarEmpresa(admin.getRazaoSocial());
+
+    CadastrarUsuario novoUsuario = cadastrarUsuario(admin, PerfilUsuario.GERENTE);
+
+    repositorioUsuario.save(novoUsuario.getUsuario());
+    empresa.getUsuarios().add(novoUsuario.getUsuario());
+
+    repositorioEmpresa.save(empresa);
+  }
+
   public void cadastrarFuncionario(CadastrarUsuario funcionario) {
     Empresa empresa = encontrarEmpresa(funcionario.getRazaoSocial());
 
-    CadastrarUsuario novoUsuario = cadastrarUsuario(funcionario, PerfilUsuario.FUNCIONARIO);
+    CadastrarUsuario novoUsuario = cadastrarUsuario(funcionario, PerfilUsuario.VENDEDOR);
 
     repositorioUsuario.save(novoUsuario.getUsuario());
     empresa.getUsuarios().add(novoUsuario.getUsuario());
