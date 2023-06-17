@@ -53,4 +53,6 @@ public class Usuario extends RepresentationModel<Usuario> {
   private String email;
   @Column(nullable = false)
   private String senha;
+public void setCredencial(Credencial credencial) {
+}
 }
